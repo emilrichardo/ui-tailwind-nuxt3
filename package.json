@@ -1,7 +1,8 @@
 {
-  "name": "ui-tailwind",
+  "name": "ui-nuxt-layer",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.3",
+  "description": "Layer UI for nuxt 3 with tailwind",
   "main": "./nuxt.config.ts",
   "scripts": {
     "dev": "nuxi dev .playground",
