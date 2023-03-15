@@ -1,11 +1,95 @@
 <template>
-    <div>
-        <Logo></Logo>
-
-        <Button type="button"  variant="primary" size="md">test</Button>
-        <Button type="button"  variant="primary_outline" size="xs">test</Button>
-    </div>
+  <div>
+    <Logo
+      class="max-w-[200px] mx-2 my-1"
+      name="Poolex"
+      :isDarkMode="false"
+      :darkModeUrl="logoModeDark"
+      :lightModeUrl="logoModeLight"
+    />
+  </div>
 </template>
+
+<script setup>
+const logoModeLight =
+  "https://res.cloudinary.com/di4frs2px/image/upload/v1678313943/logo_90631f7391.svg";
+
+const logoModeDark =
+  "https://res.cloudinary.com/di4frs2px/image/upload/v1678313957/logo_dark_63f9cc204f.svg";
+</script>
 <style>
-:root{ --primary: 18,101,224; --primary: 18,101,224; --accesible-primary:var(--light); --light: 245,245,245; --light: 245,245,245; --accesible-light:var(--dark); --dark: 63,62,62; --dark: 63,62,62; --accesible-dark:var(--light); --text_light: 235,235,235; --text_light: 235,235,235; --accesible-text_light:var(--dark); --text_dark: 110,110,110; --text_dark: 110,110,110; --accesible-text_dark:var(--light); --white: 255,255,255; --white: 255,255,255; --accesible-white:var(--dark); --primary-lighten-100: 42,116,227; --primary-darken-100: 16,91,202; --accesible-primary:var(--light); --light-lighten-100: 246,246,246; --light-darken-100: 221,221,221; --accesible-light:var(--dark); --dark-lighten-100: 82,81,81; --dark-darken-100: 57,56,56; --accesible-dark:var(--light); --text_light-lighten-100: 237,237,237; --text_light-darken-100: 212,212,212; --accesible-text_light:var(--dark); --text_dark-lighten-100: 125,125,125; --text_dark-darken-100: 99,99,99; --accesible-text_dark:var(--light); --white-lighten-100: 255,255,255; --white-darken-100: 230,230,230; --accesible-white:var(--dark); --primary-lighten-200: 65,132,230; --primary-darken-200: 14,81,179; --accesible-primary:var(--light); --light-lighten-200: 247,247,247; --light-darken-200: 196,196,196; --accesible-light:var(--dark); --dark-lighten-200: 101,101,101; --dark-darken-200: 50,50,50; --accesible-dark:var(--light); --text_light-lighten-200: 239,239,239; --text_light-darken-200: 188,188,188; --accesible-text_light:var(--dark); --text_dark-lighten-200: 139,139,139; --text_dark-darken-200: 88,88,88; --accesible-text_dark:var(--light); --white-lighten-200: 255,255,255; --white-darken-200: 204,204,204; --accesible-white:var(--dark); --primary-lighten-300: 89,147,233; --primary-darken-300: 13,71,157; --accesible-primary:var(--light); --light-lighten-300: 248,248,248; --light-darken-300: 172,172,172; --accesible-light:var(--dark); --dark-lighten-300: 121,120,120; --dark-darken-300: 44,43,43; --accesible-dark:var(--light); --text_light-lighten-300: 241,241,241; --text_light-darken-300: 165,165,165; --accesible-text_light:var(--dark); --text_dark-lighten-300: 154,154,154; --text_dark-darken-300: 77,77,77; --accesible-text_dark:var(--light); --white-lighten-300: 255,255,255; --white-darken-300: 179,179,179; --accesible-white:var(--dark);}
+:root {
+  --primary: 18, 101, 224;
+  --primary: 18, 101, 224;
+  --accesible-primary: var(--light);
+  --light: 245, 245, 245;
+  --light: 245, 245, 245;
+  --accesible-light: var(--dark);
+  --dark: 63, 62, 62;
+  --dark: 63, 62, 62;
+  --accesible-dark: var(--light);
+  --text_light: 235, 235, 235;
+  --text_light: 235, 235, 235;
+  --accesible-text_light: var(--dark);
+  --text_dark: 110, 110, 110;
+  --text_dark: 110, 110, 110;
+  --accesible-text_dark: var(--light);
+  --white: 255, 255, 255;
+  --white: 255, 255, 255;
+  --accesible-white: var(--dark);
+  --primary-lighten-100: 42, 116, 227;
+  --primary-darken-100: 16, 91, 202;
+  --accesible-primary: var(--light);
+  --light-lighten-100: 246, 246, 246;
+  --light-darken-100: 221, 221, 221;
+  --accesible-light: var(--dark);
+  --dark-lighten-100: 82, 81, 81;
+  --dark-darken-100: 57, 56, 56;
+  --accesible-dark: var(--light);
+  --text_light-lighten-100: 237, 237, 237;
+  --text_light-darken-100: 212, 212, 212;
+  --accesible-text_light: var(--dark);
+  --text_dark-lighten-100: 125, 125, 125;
+  --text_dark-darken-100: 99, 99, 99;
+  --accesible-text_dark: var(--light);
+  --white-lighten-100: 255, 255, 255;
+  --white-darken-100: 230, 230, 230;
+  --accesible-white: var(--dark);
+  --primary-lighten-200: 65, 132, 230;
+  --primary-darken-200: 14, 81, 179;
+  --accesible-primary: var(--light);
+  --light-lighten-200: 247, 247, 247;
+  --light-darken-200: 196, 196, 196;
+  --accesible-light: var(--dark);
+  --dark-lighten-200: 101, 101, 101;
+  --dark-darken-200: 50, 50, 50;
+  --accesible-dark: var(--light);
+  --text_light-lighten-200: 239, 239, 239;
+  --text_light-darken-200: 188, 188, 188;
+  --accesible-text_light: var(--dark);
+  --text_dark-lighten-200: 139, 139, 139;
+  --text_dark-darken-200: 88, 88, 88;
+  --accesible-text_dark: var(--light);
+  --white-lighten-200: 255, 255, 255;
+  --white-darken-200: 204, 204, 204;
+  --accesible-white: var(--dark);
+  --primary-lighten-300: 89, 147, 233;
+  --primary-darken-300: 13, 71, 157;
+  --accesible-primary: var(--light);
+  --light-lighten-300: 248, 248, 248;
+  --light-darken-300: 172, 172, 172;
+  --accesible-light: var(--dark);
+  --dark-lighten-300: 121, 120, 120;
+  --dark-darken-300: 44, 43, 43;
+  --accesible-dark: var(--light);
+  --text_light-lighten-300: 241, 241, 241;
+  --text_light-darken-300: 165, 165, 165;
+  --accesible-text_light: var(--dark);
+  --text_dark-lighten-300: 154, 154, 154;
+  --text_dark-darken-300: 77, 77, 77;
+  --accesible-text_dark: var(--light);
+  --white-lighten-300: 255, 255, 255;
+  --white-darken-300: 179, 179, 179;
+  --accesible-white: var(--dark);
+}
 </style>
