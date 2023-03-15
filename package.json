@@ -12,7 +12,8 @@
     "postinstall": "nuxt prepare .playground"
   },
   "devDependencies": {
-    "nuxt": "^3.0.0"
+    "nuxt": "^3.0.0",
+    "nuxt-icon": "^0.3.3"
   },
   "dependencies": {
     "@nuxt/image-edge": "^1.0.0-27968280.9739e4d",

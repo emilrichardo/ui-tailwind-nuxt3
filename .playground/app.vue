@@ -1,12 +1,44 @@
 <template>
+  <Header>
+    <template #left>
+      <Logo
+        class="max-w-[200px] mx-2 my-1"
+        name="Poolex"
+        :isDarkMode="false"
+        :darkModeUrl="logoModeDark"
+        :lightModeUrl="logoModeLight"
+      />
+    </template>
+    <template #center>
+      <nav>
+        <ul>
+          <li><a href="#">menu center</a></li>
+        </ul>
+      </nav>
+    </template>
+    <template #right>
+      <nav>
+        <ul>
+          <li><a href="#">menu right</a></li>
+        </ul>
+      </nav>
+    </template>
+    <template #menuButton>
+      <Icon
+        class="h-8 w-8 rounded-full border border-light bg-light shadow-md p-1 text-lg"
+        name="bx:menu"
+      />
+    </template>
+  </Header>
   <div>
-    <Logo
-      class="max-w-[200px] mx-2 my-1"
-      name="Poolex"
-      :isDarkMode="false"
-      :darkModeUrl="logoModeDark"
-      :lightModeUrl="logoModeLight"
-    />
+    <!-- <Hero>
+      <template #default>
+        <div>template default</div>
+      </template>
+      <template #secondary>
+        <div>template secondary</div>
+      </template>
+    </Hero> -->
   </div>
 </template>
 
