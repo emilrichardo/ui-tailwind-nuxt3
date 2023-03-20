@@ -1,5 +1,5 @@
 <template>
-  <header class="py-2 px-2 bg-light-100 dark:bg-dark">
+  <header>
     <div class="container mx-auto">
       <div class="navbar flex items-center">
         <div class="brand md:mr-8 flex mr-auto">
@@ -23,7 +23,7 @@
           :class="`lg:hidden z-10 ${toggleMenu}`"
           @click="toggleMenu = !toggleMenu"
         >
-          <slot name="menuButton" />
+          <slot name="menuButton" :show="!toggleMenu" />
         </div>
       </div>
     </div>
